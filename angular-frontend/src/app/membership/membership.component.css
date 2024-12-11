@@ -1,0 +1,92 @@
+.membership-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .plan-card {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    text-align: left;
+    position: relative;
+  }
+  
+  .plan-card h3 {
+    font-size: 18px;
+    color: #2f855a;
+    margin-bottom: 10px;
+  }
+  
+  .duration {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 15px;
+  }
+  
+  .plan-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+  }
+  
+  .plan-card ul li {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .total {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .discount {
+    font-size: 14px;
+    color: #e53e3e;
+    margin-bottom: 15px;
+  }
+  
+  .price {
+    font-size: 16px;
+    color: #2b6cb0;
+    margin-bottom: 15px;
+  }
+  
+  .subscribe-btn {
+    background-color: #2b6cb0;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    bottom: 20px;
+  }
+  
+  .subscribe-btn:hover {
+    background-color: #2c5282;
+  }
+

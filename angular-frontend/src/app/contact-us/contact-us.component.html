@@ -1,0 +1,46 @@
+<app-default-navbar></app-default-navbar>
+<body>
+    <div class="nav">
+</div>
+    <div class="container">
+        <div class="content">
+            <div class="form-section">
+                <h2>Here to <span class="highlight">Help😉</span></h2>
+                <form id="contactForm" action="/submit_contact" method="POST">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+    
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="phone">Contact Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+    
+                    <button type="submit" class="submit-button">Send message &rarr;</button>
+                </form>
+            </div>
+            <div class="info-section">
+                <h3>Join our newsletter</h3>
+                <p>Add your details and you’ll receive our quarterly email, including what’s happening with the wildlife, nature and communities around.</p>
+                <form id="newsletterForm" action="/subscribe_newsletter" method="POST">
+                    <label for="newsletterEmail">Email Address</label>
+                    <input type="email" id="newsletterEmail" name="newsletterEmail" required>
+                    <button type="submit" class="newsletter-button">Sign up &rarr;</button>
+                </form>
+                <div class="contact-info">
+                    <h3>For bookings, rates & reservations:</h3>
+                    <p><a href="#">Matrimonial Service</a></p>
+                    <h3>Legal</h3>
+                    <p><a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a></p>
+                    <h3>Alternatively contact us at:</h3>
+                    <p>Email: <a href="mailto:info@matrimonial.com">info&#64;matrimonial.com</a></p>
+                    <p>Phone: +919876543211</p>
+                    <p>Address: Seed Infotech Ltd,Nal Stop,Pune,India</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

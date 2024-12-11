@@ -1,0 +1,112 @@
+<div class="container mt-5">
+    <h2 class="mb-4">Please provide us with your basic details</h2>
+    <form (ngSubmit)="handleSubmit()" [formGroup]="myForm">
+        <div class="form-group mb-3">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" formControlName="fullName" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="mobileNo">Mobile Number</label>
+            <input type="text" id="mobileNo" formControlName="mobileNo" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="dob">Date of Birth</label>
+            <input type="text" id="dob" formControlName="dob" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="religion">Religion</label>
+            <input type="text" id="religion" formControlName="religion" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="caste">Caste</label>
+            <input type="text" id="caste" formControlName="caste" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="motherTongue">Mother Tongue</label>
+            <input type="text" id="motherTongue" formControlName="motherTongue" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="maritalStatus">Marital Status</label>
+            <select id="maritalStatus" formControlName="maritalStatus" class="form-select">
+                <option value="" selected>Select</option>
+                <option value="neverMarried">Never Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="widowed">Widowed</option>
+            </select>
+        </div>
+        <div class="form-group mb-3">
+            <label for="familyStatus">Family Status</label>
+            <select id="familyStatus" formControlName="familyStatus" class="form-select">
+                <option value="" selected>Select</option>
+                <option value="middle">Middle Class</option>
+                <option value="upper">Upper Middle Class</option>
+                <option value="high">High Class</option>
+                <option value="rich">Rich/Affluent</option>
+            </select>
+        </div>
+        <div class="form-group mb-3">
+            <label for="familyType">Family Type</label>
+            <select id="familyType" formControlName="familyType" class="form-select">
+                <option value="" selected>Select</option>
+                <option value="joint">Joint</option>
+                <option value="nuclear">Nuclear</option>
+            </select>
+        </div>
+        <div class="form-group mb-3">
+            <label for="height">Height</label>
+            <input type="text" id="height" formControlName="height" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="anyDisability">Any Disability</label>
+            <select id="anyDisability" formControlName="anyDisability" class="form-select">
+                <option value="" selected>Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div class="form-group mb-3">
+            <label for="city">City</label>
+            <input type="text" id="city" formControlName="city" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="state">State</label>
+            <input type="text" id="state" formControlName="state" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="country">Country</label>
+            <input type="text" id="country" formControlName="country" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="qualification">Qualification</label>
+            <input type="text" id="qualification" formControlName="qualification" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="occupation">Occupation</label>
+            <input type="text" id="occupation" formControlName="occupation" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="annualIncome">Annual Income</label>
+            <select id="annualIncome" formControlName="annualIncome" class="form-select">
+                <option value="" selected>Select</option>
+                <option value="0to3">0 to 3 LPA</option>
+                <option value="3to7">3 to 7 LPA</option>
+                <option value="7to12">7 to 12 LPA</option>
+                <option value="12+">12+ LPA</option>
+            </select>
+        </div>
+        <div class="form-group mb-3">
+            <label for="hobbies">Hobbies</label>
+            <input type="text" id="hobbies" formControlName="hobbies" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="aboutUser">About User</label>
+            <textarea id="aboutUser" formControlName="aboutUser" class="form-control"></textarea>
+        </div>
+        <div class="form-group mb-3">
+            <label for="profilePhoto">Upload Photo</label>
+            <input type="text" id="profilePhoto" formControlName="profilePhoto" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+<br><br>

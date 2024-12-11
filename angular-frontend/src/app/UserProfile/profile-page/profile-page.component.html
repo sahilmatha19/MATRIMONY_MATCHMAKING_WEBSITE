@@ -1,0 +1,157 @@
+<app-user-navbar></app-user-navbar>
+
+<div class="bg">
+    <div class="row py-5 px-4"> 
+        <div class="col-md-8 mx-auto"> 
+            <div class="bg-white shadow rounded overflow-hidden"> 
+                <div class="px-4 pt-0 pb-4 cover"> 
+                    <div class="media align-items-end profile-head"> 
+                        <div class="profile mr-3">
+                            <img src={{user.profilePhoto}} alt="..." width="130" class="rounded mb-2 img-thumbnail">
+                            <form (ngSubmit)="handleProfilePhotoUpdate(ppForm)" #ppForm="ngForm">
+                                <input type="text" id="profilePhoto" name="profilePhoto" ngModel placeholder="change Profile Pic">
+                                <input type="submit" value="Save" class="ibtn1">
+                            </form>
+                            <!-- <a href="#" class="btn btn-outline-dark btn-sm btn-block">Edit profile</a> -->
+                        </div> 
+                        <div class="media-body mb-5 text-white"> 
+                            <h4 class="mt-0 mb-0">{{user.fullName}}</h4> 
+                            <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>{{user.city}}</p> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div class="bg-light p-4 d-flex justify-content-end text-center"> 
+                    <ul class="list-inline mb-0"> 
+                        <li class="list-inline-item"> 
+                            <h5 class="font-weight-bold mb-2 d-block">{{user.occupation}}</h5>
+                            <small class="text-muted"> <i class="fas fa-image mr-1"></i>Occupation</small> 
+                        </li> 
+                        <li class="list-inline-item"> 
+                            <h5 class="font-weight-bold mb-2 d-block">{{user.qualification}}</h5>
+                            <small class="text-muted"> <i class="fas fa-user mr-1"></i>Education</small> 
+                        </li> 
+                         
+                    </ul> 
+                </div> 
+                <div class="px-4 py-3"> 
+                    <h5 class="mb-0">About</h5> 
+                    <form (ngSubmit)="handleSubmit(myForm)" #myForm="ngForm">
+                    <div class="p-4 rounded shadow-sm bg-light">
+                        <table>
+                            <tr>
+                                <td class="key"><b>Name: </b></td>
+                                <td><input type="text" id="" name="fullName" [(ngModel)]="user.fullName" placeholder="Enter Full Name"></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Email Id: </b></td>
+                                <td><input type="email" id="" name="emailId" [(ngModel)]="user.emailId" placeholder="Enter Email Id"></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Mobile Number: </b></td>
+                                <td><input type="text" id="" name="mobileNo" [(ngModel)]="user.mobileNo" placeholder="Enter Mobile Number"></td>
+                                <!-- <td><span *ngIf="inputMobileNo.touched && inputMobileNo.errors?.pattern" class="text-danger d-block">Enter a 10 digit mobile number.</span></td> -->
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Birth Date: </b></td>
+                                <td><input type="text" id="dob" name="dob" [(ngModel)]="user.dob" placeholder="Enter Date Of Birth"></td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="key"><b>Religion: </b></td>
+                                <td><input type="text" id="religion" name="religion" [(ngModel)]="user.religion" placeholder="Enter Your Religion"></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Caste: </b></td>
+                                <td><input type="text" id="caste" name="caste" [(ngModel)]="user.caste" placeholder="Enter Your Caste"></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Mother Tongue: </b></td>
+                                <td><input type="text" id="motherTongue" name="motherTongue" [(ngModel)]="user.motherTongue" placeholder="Enter Your Mother Tongue"></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Marital Status: </b></td>
+                                <td><select id="maritalStatus" name="maritalStatus" [(ngModel)]="user.maritalStatus" placeholder="Select Marital Status">
+                                    <option value="" selected>Select</option>
+                                    <option value="neverMarried">Never Married</option>
+                                    <option value="divorced">Divorced</option>
+                                    <option value="widowed">Widowed</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Family Status: </b></td>
+                                <td><select id="familyStatus" name="familyStatus" [(ngModel)]="user.familyStatus" placeholder="Select Finantial Class">
+                                    <option value="" selected>Select</option>
+                                    <option value="middle">Middle Class</option>
+                                    <option value="upper">Upper Middle Class</option>
+                                    <option value="high">High Class</option>
+                                    <option value="rich">Rich/Affluent</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Family Type: </b></td>
+                                <td><select id="familyType" name="familyType" [(ngModel)]="user.familyType" placeholder="Select Family Type">
+                                    <option value="" selected>Select</option>
+                                    <option value="joint">Joint</option>
+                                    <option value="nuclear">Nuclear</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Height: </b></td>
+                                <td><input type="text" id="height" name="height" [(ngModel)]="user.height" placeholder="Enter Your Height"></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Any Disability: </b></td>
+                                <td><select id="anyDisability" name="anyDisability" [(ngModel)]="user.anyDisability" placeholder="">
+                                    <option value="" selected>Select</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>City: </b></td>
+                                <td><input type="text" id="city" name="city" [(ngModel)]="user.city" placeholder="Enter Your City"></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>State: </b></td>
+                                <td><input type="text" id="state" name="state" [(ngModel)]="user.state" placeholder="Enter Your State"></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Country: </b></td>
+                                <td><input type="text" id="country" name="country" [(ngModel)]="user.country" placeholder="Enter Your Country"></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Qualification: </b></td>
+                                <td><input type="text" id="qualification" name="qualification" [(ngModel)]="user.qualification" placeholder="Enter Your Qualification"></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Occupation: </b></td>
+                                <td><input type="text" id="occupation" name="occupation" [(ngModel)]="user.occupation" placeholder="Enter Your Occupation"></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Annual Income: </b></td>
+                                <td><select id="annualIncome" name="annualIncome" [(ngModel)]="user.annualIncome" placeholder="Select Your Annual Income">
+                                    <option value="" selected>Select</option>
+                                    <option value="0 to 3 Lakh">0 to 3 Lakh</option>
+                                    <option value="3 to 7 Lakh">3 to 7 Lakh</option>
+                                    <option value="7 to 12 Lakh">7 to 12 Lakh</option>
+                                    <option value="12 Lakh+">12+ Lakh</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Hobbies: </b></td>
+                                <td><input type="text" id="hobbies" name="hobbies" [(ngModel)]="user.hobbies" placeholder="Enter Your Hobbies"></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>About User: </b></td>
+                                <td><textarea id="aboutUser" name="aboutUser" [(ngModel)]="user.aboutUser" placeholder="Share a few lines about yourself"></textarea></td>
+                                <!-- <td><span *ngIf="inputAboutUser.touched && inputAboutUser.errors?.minlength" class="text-danger d-block">Enter atleast min 30 character</span></td> -->
+                            </tr>     
+                        </table>
+                        <input type="submit" value="Save" class="ibtn2">
+                    </div> 
+                </form>
+                </div> 
+                
+            </div>
+    </div>
+    </div>

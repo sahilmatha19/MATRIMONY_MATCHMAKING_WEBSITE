@@ -1,0 +1,55 @@
+<app-default-navbar></app-default-navbar>
+
+<div class="container mt-5">
+    <div class="card mx-auto">
+      <div class="card-body d-flex flex-column justify-content-between">
+        <h4 class="card-title text-center">Find your perfect match</h4>
+        <hr>
+        <h6 class="text-center">Register Yourself</h6>
+        
+        <form (ngSubmit)="handleRegister()" [formGroup]="myForm" novalidate>
+  
+          <div class="form-group mb-1">
+            <label for="fullName">Enter Name</label>
+            <input type="text" class="form-control form-control-sm" formControlName="fullName" id="fullName" (blur)="inputFullName.markAsTouched()">
+            <span *ngIf="inputFullName.touched && inputFullName.errors?.required" class="text-danger d-block">Full Name is required.</span>
+          </div>
+  
+          <div class="form-group mb-1">
+            <label for="password">Password</label>
+            <input type="password" class="form-control form-control-sm" formControlName="password" id="password" (blur)="inputPassword.markAsTouched()">
+            <span *ngIf="inputPassword.touched && inputPassword.errors?.required" class="text-danger d-block">Password is required.</span>
+            <span *ngIf="inputPassword.touched && inputPassword.errors?.pattern" class="text-danger d-block">Password must include uppercase, lowercase, number, special character and min 8 characters.</span>
+          </div>
+  
+          <div class="form-group mb-1">
+            <label for="emailId">Email Id</label>
+            <input type="email" class="form-control form-control-sm" formControlName="emailId" id="emailId" (blur)="inputEmailId.markAsTouched()">
+            <span *ngIf="inputEmailId.touched && inputEmailId.errors?.required" class="text-danger d-block">Email Id is required.</span>
+            <span *ngIf="inputEmailId.touched && inputEmailId.errors?.pattern" class="text-danger d-block">Please enter proper email Id.</span>
+          </div>
+  
+          <div class="form-group mb-1">
+            <label for="mobileNo">Enter Mobile Number</label>
+            <input type="text" class="form-control form-control-sm" formControlName="mobileNo" id="mobileNo" (blur)="inputMobileNo.markAsTouched()">
+            <span *ngIf="inputMobileNo.touched && inputMobileNo.errors?.required" class="text-danger d-block">Mobile number is required.</span>
+            <span *ngIf="inputMobileNo.touched && inputMobileNo.errors?.pattern" class="text-danger d-block">Enter a 10 digit mobile number.</span>
+          </div>
+  
+          <div class="form-group mb-1">
+            <label for="gender">Gender</label>
+            <select formControlName="gender" class="form-select form-select-sm" id="gender" (blur)="inputGender.markAsTouched()">
+              <option value="" selected>Select</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+            <span *ngIf="inputGender.touched && inputGender.errors?.required" class="text-danger d-block">Gender is required.</span>
+          </div>
+  
+          <button type="submit" class="btn btn-primary w-100 btn-sm" [disabled]="!myForm.valid">REGISTER</button>
+          <p class="terms text-secondary text-center mt-1">Already have an account? <a href="/login" class="text-decoration-none">Login</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br><br><br>

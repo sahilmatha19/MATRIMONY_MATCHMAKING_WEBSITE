@@ -1,0 +1,130 @@
+<app-user-navbar></app-user-navbar>
+
+<div class="bg">
+    <div class="row py-5 px-4"> 
+        <div class="col-md-8 mx-auto"> 
+            <div class="bg-white shadow rounded overflow-hidden"> 
+                <div class="px-4 pt-0 pb-4 cover"> 
+                    <div class="media align-items-end profile-head"> 
+                        <div class="profile mr-3">
+                            <img src={{profileUser.profilePhoto}} alt="..." width="130" class="rounded mb-2 img-thumbnail">
+                            <button class="custom-btn btn-9" (click)="handleShowInterest(profileUser.emailId)">Show Interest</button>
+                                
+                            <!-- <a href="#" class="btn btn-outline-dark btn-sm btn-block">Edit profile</a> -->
+                        </div> 
+                        <div class="media-body mb-5 text-white"> 
+                            <h4 class="mt-0 mb-0">{{profileUser.fullName}}</h4> 
+                            <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>{{profileUser.city}}</p> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div class="bg-light p-4 d-flex justify-content-end text-center"> 
+                    <ul class="list-inline mb-0"> 
+                        <li class="list-inline-item"> 
+                            <h5 class="font-weight-bold mb-2 d-block">{{profileUser.occupation}}</h5>
+                            <small class="text-muted"> <i class="fas fa-image mr-1"></i>Occupation</small> 
+                        </li> 
+                        <li class="list-inline-item"> 
+                            <h5 class="font-weight-bold mb-2 d-block">{{profileUser.qualification}}</h5>
+                            <small class="text-muted"> <i class="fas fa-user mr-1"></i>Education</small> 
+                        </li> 
+                         
+                    </ul> 
+                </div> 
+                <div class="px-4 py-3"> 
+                    <h5 class="mb-0">About</h5> 
+                    
+                    <div class="p-4 rounded shadow-sm bg-light">
+                        <table>
+                            <tr>
+                                <td class="key"><b>Name: </b></td>
+                                <td>{{profileUser.fullName}}</td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Email Id: </b></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Mobile Number: </b></td>
+                                <td></td>
+                                <!-- <td><span *ngIf="inputMobileNo.touched && inputMobileNo.errors?.pattern" class="text-danger d-block">Enter a 10 digit mobile number.</span></td> -->
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Birth Date: </b></td>
+                                <td>{{profileUser.dob}}</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="key"><b>Religion: </b></td>
+                                <td>{{profileUser.religion}}</td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Caste: </b></td>
+                                <td>{{profileUser.caste}}</td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Mother Tongue: </b></td>
+                                <td>{{profileUser.motherTongue}}</td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Marital Status: </b></td>
+                                <td>{{profileUser.maritalStatus}}</td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Family Status: </b></td>
+                                <td>{{profileUser.familyStatus}}</td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Family Type: </b></td>
+                                <td>{{profileUser.familyType}}</td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Height: </b></td>
+                                <td>{{profileUser.height}}</td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Any Disability: </b></td>
+                                <td>{{profileUser.anyDisability}}</td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>City: </b></td>
+                                <td>{{profileUser.city}}</td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>State: </b></td>
+                                <td>{{profileUser.state}}</td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Country: </b></td>
+                                <td>{{profileUser.country}}</td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Qualification: </b></td>
+                                <td>{{profileUser.qualification}}</td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Occupation: </b></td>
+                                <td>{{profileUser.occupation}}</td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Annual Income: </b></td>
+                                <td>{{profileUser.annualIncome}}</td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>Hobbies: </b></td>
+                                <td>{{profileUser.hobbies}}</td>
+                            </tr>
+                            <tr>
+                                <td class="key"><b>About User: </b></td>
+                                <td>{{profileUser.aboutUser}}</td>
+                                <!-- <td><span *ngIf="inputAboutUser.touched && inputAboutUser.errors?.minlength" class="text-danger d-block">Enter atleast min 30 character</span></td> -->
+                            </tr>     
+                        </table>
+                        
+                    </div> 
+                
+                </div> 
+                
+            </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<app-user-navbar></app-user-navbar>
+
+<section class="cards row">
+
+    <!--*ngFor=""-->
+    <article class="card card--1 col-3" *ngFor="let i of u">
+
+      <!-- [ngStyle]="{'background-image': 'url(' + https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 + ')'}" -->
+      <div class="card__img" [ngStyle]="{'background-image': 'url(' + i.photo + ')'}"></div>
+      <a href="#" class="card_link" >
+        
+        <!-- [ngStyle]="{'background-image': 'url(' + https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 + ')'}" -->
+         <div class="card__img--hover" [ngStyle]="{'background-image': 'url(' + i.photo + ')'}"></div>
+       </a>
+      <div class="card__info">
+        <a href="#"><span class="card__category">{{i.city}}</span></a>
+        <a href="#"><h4 class="card__title">{{i.name}}</h4></a>
+        <span class="card__by">Birth Date: <a href="#" class="card__author" title="author">{{i.dob}}</a></span>
+        <div class="frame">
+            <span>
+                <button class="custom-btn btn-9">Confirm</button></span>
+                <span>
+                <button class="custom-btn btn-5"><span>Block</span></button>
+            </span>
+        </div>
+      </div>
+    </article>
+            
+      
+      </section>
+
+
+      <header>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+     </header>
+
+     <br><br>

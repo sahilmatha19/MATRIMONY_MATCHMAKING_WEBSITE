@@ -1,0 +1,22 @@
+<app-user-navbar></app-user-navbar>
+
+<div class="membership-container">
+  <h2>Special Offers Reserved Exclusively For Our Valued Members!</h2>
+  <p>Upgrade Your Plan For Added Features!</p>
+  <div class="plans">
+    <div *ngFor="let plan of plans" class="plan-card">
+      <h3>{{ plan.name }}</h3>
+      <p class="duration">{{ plan.duration }}</p>
+      <ul>
+        <li *ngFor="let feature of plan.features">{{ feature }}</li>
+      </ul>
+      <p class="total">Total {{ plan.total }}</p>
+      <p class="discount">{{ plan.discount }}</p>
+      <p class="price">You Pay <strong>{{ plan.price }}</strong></p><br><br>
+      <button>Upgrade</button>
+    </div>
+  </div>
+</div>
+  <br><br>
+
+

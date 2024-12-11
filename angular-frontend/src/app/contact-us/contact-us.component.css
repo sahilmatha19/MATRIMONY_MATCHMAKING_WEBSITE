@@ -1,0 +1,107 @@
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav{
+    margin-bottom: 80px;
+}
+/* Container for the entire layout */
+.container {
+    /* margin-top: 200px; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh; /* Full viewport height */
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background color for the page */
+}
+
+/* Main content area */
+.content {
+    display: flex;
+    gap: 20px; /* Space between sections */
+    max-width: 1200px; /* Max width for large screens */
+    width: 100%;
+}
+
+/* Styling for the form section */
+.form-section {
+    background: #fff; /* White background for form */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    width: 50%; /* Adjust width as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Form elements styling */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form textarea {
+    resize: vertical; /* Allows vertical resizing only */
+}
+
+.submit-button,
+.newsletter-button {
+    background-color: #007bff; /* Blue background for buttons */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover,
+.newsletter-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for the info section */
+.info-section {
+    background: #fff; /* White background for info section */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    width: 50%; /* Adjust width as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Contact info styling */
+.contact-info a {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* Highlighting span */
+.highlight {
+    color: #007bff; /* Blue color for highlight */
+}
+
+.form-section {
+    background: linear-gradient(135deg, #FF6F96, #CF6AA7, #9968A7, #656296, #3F577A, #2F4858);
+    color: #fff;
+}

@@ -1,0 +1,66 @@
+<app-user-navbar></app-user-navbar>
+
+<!-- <section class="cards row">
+
+    
+    <article class="card card--1 col-3" *ngFor="let u of usr">
+
+      
+      <div class="card__img" [ngStyle]="{'background-image': 'url(' + u.photo + ')'}"></div>
+      <a href="#" class="card_link" >
+
+        
+         <div class="card__img--hover" [ngStyle]="{'background-image': 'url(' + u.photo + ')'}"></div>
+       </a>
+      <div class="card__info">
+        <span class="card__category">{{u.city}}</span>
+        <h4 class="card__title">{{u.name}}</h4>
+        <span class="card__by">Birth Date: <a href="#" class="card__author" title="author">{{u.dob}}</a></span>
+        <div class="frame">
+            <span>
+                <button class="custom-btn btn-9">Show Interest</button>
+            </span>
+        </div>
+      </div>
+    </article>
+            
+      
+</section> -->
+
+<!-- Start Profiles from db -->
+
+<section class="cards row">
+
+  <!--*ngFor="let profile of profiles"-->
+  <article class="card card--1 col-3" *ngFor="let profile of profiles">
+
+    <!--[ngStyle]="{'background-image': 'url(' + profile.photo + ')'}"-->
+    <div class="card__img" [ngStyle]="{'background-image': 'url(' + profile.profilePhoto + ')'}" ></div>
+    <!-- <a href="#" class="card_link" > -->
+
+      <!--[ngStyle]="{'background-image': 'url(' + u.photo + ')'}"-->
+       <div class="card__img--hover" [ngStyle]="{'background-image': 'url(' + profile.profilePhoto + ')'}"(click)="handleViewUser(profile.emailId)"></div>
+     <!-- </a> -->
+    <div class="card__info">
+      <span class="card__category">{{profile.city}}</span>
+      <h4 class="card__title" (click)="handleViewUser(profile.emailId)">{{profile.fullName}}</h4>
+      <span class="card__by">Birth Date: <a href="#" class="card__author" title="author">{{profile.dob}}</a></span>
+      <div class="frame">
+          <span>
+              <button class="custom-btn btn-9" (click)="handleShowInterest(profile.emailId)">Show Interest</button>
+          </span>
+      </div>
+    </div>
+  </article>
+          
+    
+    </section>
+
+
+<!-- End Profiles from db -->
+
+
+      <header>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+     </header>
+     <br><br>
